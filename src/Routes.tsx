@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import SignIn from './screens/auth/SignIn';
 import HomePageRoutes from './home-page-routes';
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
+import Disclaimer from "./screens/Disclaimer/Disclaimer";
 const Stack = createStackNavigator();
 
 const AppRoutes = () => {
@@ -25,7 +26,10 @@ const AppRoutes = () => {
             options={{ headerShown: false }}
           />
         ) : (
+          <>
           <Stack.Screen name="Home" component={HomePageRoutes} />
+          <Stack.Screen name="Disclaimer" component={Disclaimer} />
+          </>
         )}
       </Stack.Navigator>
     </NavigationContainer>

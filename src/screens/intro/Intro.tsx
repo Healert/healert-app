@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
+import DisclaimerText from '../Disclaimer/DisclaimerText';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -18,6 +19,7 @@ const styles = StyleSheet.create({
     text: {
       color: 'black',
       textAlign: 'center',
+      padding: 15
     },
     title: {
       fontSize: 22,
@@ -57,6 +59,12 @@ const slides = [
     text: 'Easily determine if you\'re at risk of infection',
     backgroundColor: '#dfdfdf',
     image: require('../../../assets/img/trace.png')
+  },
+  {
+    key: "4",
+    title: 'Disclaimer',
+    text: DisclaimerText,
+    backgroundColor: "#fff"
   }
 ];
  
@@ -74,7 +82,7 @@ const IntroSlider = ({_onDone}) => {
     return (
       <View style={{...styles.slide, backgroundColor: item.backgroundColor}}>
         <Text style={styles.title}>{item.title}</Text>
-        <Image source={item.image} style={styles.image} />
+        {item.image && <Image source={item.image} style={styles.image} />}
         <Text style={styles.text}>{item.text}</Text>
       </View>
     );
