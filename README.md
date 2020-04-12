@@ -1,4 +1,4 @@
-# React Native App for Healert
+# React Native App for Healert [![Build Status](https://app.bitrise.io/app/0015059807dacac5/status.svg?token=sHVZ1CvOBnBG5MmkRDds1A&branch=master)](https://app.bitrise.io/app/0015059807dacac5)
  *This app utilizes the `React Native CLI` instead of the `Expo CLI` as earlier done.* Before you begin, make sure you setup your environment as outlined here https://reactnative.dev/docs/environment-setup. Ensure you have installed as indicated by the docs:
 
  1) JDK
