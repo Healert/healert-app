@@ -6,6 +6,7 @@
  3) Android SDK + Android Virtual Devoce
  4) XCode
  5) Cocoapods
+ 6) Watchman
 
 # Development
  1. Clone the project on your machine `git clone https://github.com/Healert/healert-app.git`
