@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
+import DisclaimerText from '../Disclaimer/DisclaimerText';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -57,6 +58,12 @@ const slides = [
     text: 'Easily determine if you\'re at risk of infection',
     backgroundColor: '#dfdfdf',
     image: require('../../../assets/img/trace.png')
+  },
+  {
+    key: "4",
+    title: 'Disclaimer',
+    text: DisclaimerText,
+    backgroundColor: "#fff"
   }
 ];
  
