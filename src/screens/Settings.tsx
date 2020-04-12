@@ -3,13 +3,13 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Text } from 'react-native';
 import { UserContext } from '../utils/User';
 
-const Home = () => {
+const Settings = () => {
   const user = React.useContext(UserContext);
   return (
     <SafeAreaView>
-      <Text>Hello Mamacita ;)</Text>
+      <Text>Settings Page</Text>
     </SafeAreaView>
   );
 };
 
-export default Home;
+export default Settings;

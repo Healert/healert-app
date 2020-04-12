@@ -18,6 +18,7 @@
 		3A974FB9F2633F31F6012597 /* libPods-healert.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0292A7D51BF1460FDEDB3784 /* libPods-healert.a */; };
 		93112F16750B89F4EAECBFC5 /* libPods-healert-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D09D7044EABE7EC003D8FD6 /* libPods-healert-tvOSTests.a */; };
 		A7F1C4ED018C490046314AE2 /* libPods-healert-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B41CE8A3416642139380EF9A /* libPods-healert-tvOS.a */; };
+		B2E02A24244355040005B866 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = CD7FDE53244256A8009DB141 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -618,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E02A24244355040005B866 /* GoogleService-Info.plist in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
