@@ -12,7 +12,7 @@
  2. Install dependencies by running `yarn`
  3. Setup firebase config: 
     1. Android - include the `google-services.json` under `android/app` for firebase auth
-    2. For IoS, include the `GoogleService-info.plist` under `ios/healert`, open Xcode and add `GoogleService-info.plist` under the *Build Phases* tab in the *Compile Sources* section as shown in the image below. Then run `cd ios && pod install && cd ..`
+    2. For IoS, using xcode, open the `ios` folder and right click the `healert` folder, click add files and add `GoogleService-info.plist`, ensure the copy files if needed checkbox is checked. Then add `GoogleService-info.plist` under the *Build Phases* tab in the *Compile Sources* section as shown in the image below. Then run `cd ios && pod install && cd ..`
     ![Adding GoogleService-info.plist to Compile Sources in XCode](screenshot.png)
  4. Run:
     1. Android: `yarn run:android`
