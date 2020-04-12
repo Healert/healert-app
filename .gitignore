@@ -59,6 +59,7 @@ buck-out/
 /ios/Pods/*
 
 #Firebase Configs
+/ios/healert/GoogleService-Info.plist
 /ios/GoogleService-Info.plist
 /android/app/google-services.json
 

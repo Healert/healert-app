@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -13,7 +12,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     image: {
-      width: SCREEN_WIDTH - 50,
+      width: SCREEN_WIDTH - 10,
       height: SCREEN_HEIGHT / 1.5,
     },
     text: {
@@ -26,14 +25,13 @@ const styles = StyleSheet.create({
       textAlign: 'center',
     },
     buttonCircle: {
-        width: 40,
-        height: 40,
         backgroundColor: 'rgba(255, 255, 255, .2)',
-        borderRadius: 20,
+        borderRadius: 8,
         justifyContent: 'center',
         alignItems: 'center',
-        borderWidth: 2,
-        borderColor: 'green'
+        borderWidth: 1,
+        borderColor: '#799eb2',
+        padding: 8
       }
   });
 
@@ -43,7 +41,7 @@ const slides = [
     key: "1",
     title: 'Screen Yourself',
     text: 'Easily screen yourself at home with easy to fill in forms',
-    backgroundColor: '#123962',
+    backgroundColor: '#dddddf',
     image: require('../../../assets/img/screen.png')
   },
   {
@@ -57,7 +55,7 @@ const slides = [
     key: "3",
     title: 'Contact Tracing',
     text: 'Easily determine if you\'re at risk of infection',
-    backgroundColor: '#f1632a',
+    backgroundColor: '#dfdfdf',
     image: require('../../../assets/img/trace.png')
   }
 ];
@@ -67,18 +65,14 @@ const IntroSlider = ({_onDone}) => {
   const _renderDoneButton = () => {
     return (
       <View style={styles.buttonCircle}>
-         <Icon
-          name='check'
-          color="green"
-          size={24}
-        />
+         <Text style={{fontSize: 18}}>Start</Text>
       </View>
     );
   };
 
   const _renderItem = ({ item }) => {
     return (
-      <View style={styles.slide}>
+      <View style={{...styles.slide, backgroundColor: item.backgroundColor}}>
         <Text style={styles.title}>{item.title}</Text>
         <Image source={item.image} style={styles.image} />
         <Text style={styles.text}>{item.text}</Text>
