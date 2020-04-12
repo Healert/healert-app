@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     text: {
       color: 'black',
       textAlign: 'center',
+      padding: 15
     },
     title: {
       fontSize: 22,
@@ -81,7 +82,7 @@ const IntroSlider = ({_onDone}) => {
     return (
       <View style={{...styles.slide, backgroundColor: item.backgroundColor}}>
         <Text style={styles.title}>{item.title}</Text>
-        <Image source={item.image} style={styles.image} />
+        {item.image && <Image source={item.image} style={styles.image} />}
         <Text style={styles.text}>{item.text}</Text>
       </View>
     );
