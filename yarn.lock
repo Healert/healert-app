@@ -5774,6 +5774,11 @@ react-native-app-intro-slider@^4.0.0:
   resolved "https://registry.yarnpkg.com/react-native-app-intro-slider/-/react-native-app-intro-slider-4.0.0.tgz#f11841ec96bd4ef949750d62c64284980bec8f04"
   integrity sha512-aQucxBkRpGBDC3NJ85gcPRjlCrQ35l1i00RE7Ta5UIsbHFWkhcFYR0hPyGr9Q8j301A4Q0SqXDDMvF/eCGi+NA==
 
+react-native-config@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-1.0.0.tgz#fada8f79996db1eadcee9e221afd713c91f677e5"
+  integrity sha512-ZydFNkGgjPCgJ4nDDGxuoMSsz4HACJH6TyYEDeefnzGW3XS/HXxdiW8SOaOD8B0WACQJHM028ypnwhexJ7hhsA==
+
 react-native-elements@^1.2.7:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-1.2.7.tgz#1eca2db715c41722aeb67aea62bd2a4621adb134"

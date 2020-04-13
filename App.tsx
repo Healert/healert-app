@@ -1,5 +1,11 @@
 import React from "react";
-import { Platform, AsyncStorage } from "react-native";
+import {
+  Platform,
+  AsyncStorage,
+  NativeModules,
+  DeviceEventEmitter,
+  ToastAndroid
+} from "react-native";
 import AppRoutes from "./src/Routes";
 import IntroSlider from "./src/screens/intro/Intro";
 import UserProvider from "./src/utils/User";
@@ -16,10 +22,32 @@ const firebaseCredentials = Platform.select({
 });
 
 type Props = {};
+type LocationCoordinates = {
+  latitude: number;
+  longitude: number;
+  timestamp: number;
+};
 
 const App = () => {
   const [firstLaunch, setFirstLaunch] = React.useState<boolean>();
+  const startLocationService = NativeModules.GeoLocation.getLocation()
+    .then((as: LocationCoordinates) => {
+      console.log(as);
+      ToastAndroid.show(as.latitude.toString(), 6);
+    }, 10)
+    .catch(e => console.log(e));
+  //Initialize authentication mechanism and url to post data
+  NativeModules.GeoLocation.startService("sss", "ssss", "sss", "sss")
+    .then(status => {
+      if (status.status === "success") {
+        startLocationService;
+      }
+    })
+    .catch(e => console.log(e));
 
+  DeviceEventEmitter.addListener("testEvent", (e: LocationCoordinates) => {
+    console.log(e);
+  });
   React.useEffect(() => {
     AsyncStorage.getItem("alreadyLaunched").then(value => {
       if (value == null) {
